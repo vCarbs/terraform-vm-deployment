@@ -1,5 +1,5 @@
 # terraform
-<h1>Terraform template for provisioning new VM's on Nutanix</h1>
+<h2>Terraform template for provisioning new VM's on Nutanix</h2>
 
 <h3>Commands</h3>
 
