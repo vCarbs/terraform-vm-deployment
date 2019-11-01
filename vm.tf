@@ -16,7 +16,7 @@ provider "nutanix" {
 ##################################################################################
 
 data "nutanix_cluster" "cluster" {
-  cluster_id = "00058140-c5ca-2ee6-1a9d-0cc47a93c7de"
+  cluster_id = var.cluster_id[terraform.workspace]
 }
 
 #data "nutanix_image" "ubuntu" {

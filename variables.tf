@@ -20,7 +20,9 @@ variable "vmcount" {
 variable "categories" {
   type = map(string)
 }
-
+variable "cluster_id" {
+  type = map(string)
+}
 
 ##################################################################################
 # LOCALS
