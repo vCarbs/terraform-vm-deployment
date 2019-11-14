@@ -24,3 +24,8 @@ categories = {
   dev  = "dev_terraform"
   prod = "prod_terraform"
 }
+
+cluster_id = {
+  dev = "00058140-c5ca-2ee6-1a9d-0cc47a93c7de"
+  prod = "00058140-c5ca-2ee6-1a9d-0cc47a93c7de"
+}

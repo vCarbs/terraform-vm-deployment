@@ -16,7 +16,7 @@ provider "nutanix" {
 ##################################################################################
 
 data "nutanix_cluster" "cluster" {
-  cluster_id = "00058140-c5ca-2ee6-1a9d-0cc47a93c7de"
+  cluster_id = var.cluster_id[terraform.workspace]
 }
 
 #data "nutanix_image" "ubuntu" {
@@ -90,10 +90,10 @@ resource "nutanix_virtual_machine" "vm" {
 # OUTPUT
 ##################################################################################
 
-#output "ip_address" {
-#  value = "${lookup(nutanix_virtual_machine.vm[0].nic_list.0.ip_endpoint_list[0], "ip")}"
-#}
+output "ip_address" {
+  value = "${lookup(nutanix_virtual_machine.vm[0].nic_list.0.ip_endpoint_list[0], "ip")}"
+}
 
-#output "disk_id" {
-#  value = "${lookup(nutanix_virtual_machine.vm.disk_list.0, "uuid")}"
-#}
+output "disk_id" {
+  value = "${lookup(nutanix_virtual_machine.vm[0].disk_list.0, "uuid")}"
+}
